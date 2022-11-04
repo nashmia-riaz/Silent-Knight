@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Silent Knight</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=500 height=888 style="width: 500px; height: 888px; background: #231F20"></canvas>
+    <script src="Build/Web Build.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Web Build.data",
+        frameworkUrl: "Build/Web Build.framework.js",
+        codeUrl: "Build/Web Build.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Panash Games",
+        productName: "Silent Knight",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
